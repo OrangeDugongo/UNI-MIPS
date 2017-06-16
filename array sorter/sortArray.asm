@@ -79,6 +79,7 @@ exit3:
 
 ### sort_array ###
 sort_array:
+	addi $a1, $a1, -1
 loop_esterno:
 	beq $a1, 0, exit_loop_esterno
 	li $t0, 0
@@ -102,7 +103,6 @@ exit_loop_esterno:
 	
 swap:
 	sw $t2, ($t1)
-	addi $t4, $t1, -4
-	sw $t3, ($t4)
+	sw $t3, -4($t1)
 	j exit_swap
 
