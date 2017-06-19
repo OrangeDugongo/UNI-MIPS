@@ -94,7 +94,7 @@ loop_first_string:
 	
 	bgt $v0, 0, swap_first
 	
-	addi $s0, $s0, 25	# salto alla prossima stringa da conservare
+	addi $s0, $s0, 25	# salto alla prossima stringa da confrontare 
 	addiu $s2, $s2, 1
 	j loop_first_string
 
@@ -125,7 +125,7 @@ swap_first:
 	
 	
 ### LAST_STRING ###
-# cole la last_string cambia solo lo swap che si esegue se il risultato della strcmp è minore di zero
+# come la last_string cambia solo lo swap che si esegue se il risultato della strcmp è minore di zero
 last_string:
 	addi $sp, $sp, -16
 	sw $ra, ($sp)
